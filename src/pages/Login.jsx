@@ -1,8 +1,8 @@
 import { TextField, Typography, Box, Button } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { login } from "../Utils/auth";
 import { useDispatch } from "react-redux";
+import { login } from "../redux/authSlice";
 
 function Login(){
 
