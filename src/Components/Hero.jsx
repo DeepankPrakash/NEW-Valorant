@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Container, Stack } from "@mui/material";
+import { Box, Typography, Button, Container, Stack, Tooltip } from "@mui/material";
 import valorant from "../assets/valorant.jpg";
 import { Link } from "react-router-dom";
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
@@ -70,6 +70,14 @@ function Hero() {
         Maps
       </Button>
      </Stack>
+      
+      <Stack spacing={2} sx={{ mt: 1, mb: 1, alignItems: "center" }}>
+    <Tooltip title="Coming soon...This feature is currently under development and will be available in a future update. Thank you for your patience :)" placement="bottom"> 
+        <span>
+          <Button disabled>Valorant Premium</Button>
+         </span>
+    </Tooltip>
+      </Stack>
 
      <Footer />
     </>
