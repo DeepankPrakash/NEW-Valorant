@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Typography, Card, Grid, Stack, Chip , Box} from "@mui/material";
 import { modes } from "../data/modes";
+import GameModeImg from "../assets/GameModeBack.jpg";
 
 function GameModes() {
   const [gameModes, setGameModes] = useState([]);
@@ -12,11 +13,15 @@ function GameModes() {
   }, []);
 
   return (
-    <Container sx={{ mt: 6 }}>
-      <Typography variant="h3" mb={4}>
+
+  // <Grid>
+    <Box sx={{ mt: 6, backgroundImage: `url(${GameModeImg})`, backgroundSize: "cover", backgroundPosition: "center", minHeight: "100vh" }}>
+      <Typography variant="h3" mb={4} sx={{color: "white"}}>
         Game Modes
       </Typography>
 
+      <Stack spacing={3} sx={{backgroundColor: "rgba(0, 0, 0, 0.8)", p: 3, borderRadius: 2}}>
+      <Container>
       <Grid container spacing={3}>
         {gameModes.map((mode) => (
           <Grid item xs={12} sm={6} md={4} key={mode.id}>
@@ -47,7 +52,11 @@ function GameModes() {
           </Grid>
         ))}
       </Grid>
-    </Container>
+
+      </Container>
+      </Stack>
+    </Box>
+  // </Grid>
   );
 }
 
