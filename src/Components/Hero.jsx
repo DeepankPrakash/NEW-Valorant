@@ -47,14 +47,12 @@ function Hero() {
         </Typography>
       </Stack>
 
-      
-      
       <Stack direction='row' spacing={2} alignItems="center" justifyContent="center">
       <Button  component={Link} to="/agents" startIcon={<MilitaryTechIcon />} sx={{ mt: 4, mx: "auto", '&:hover': 
         {transition: '0.2s', transform: 'scale(1.13)'}
        }} variant="contained" size="large">
         Agents</Button>
-      <Button  component={Link} to="/Gamemodes" startIcon={<SportsEsportsIcon />} sx={{ mt: 4, mx: "auto", '&:hover': 
+      <Button  component={Link} to="/gamemodes" startIcon={<SportsEsportsIcon />} sx={{ mt: 4, mx: "auto", '&:hover': 
         {transition: '0.2s', transform: 'scale(1.13)'}
        }} variant="contained" size="large">
         Game Modes
